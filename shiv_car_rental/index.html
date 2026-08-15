@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shiv Car Rental - Rent Your Car</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <i class="fas fa-car"></i>
+            <span>Shiv Car Rental</span>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="#home" class="nav-link active">
+                Home
+            </a>
+
+            <a href="#cars" class="nav-link">
+                Cars
+            </a>
+<a href="#cities" class="nav-link">
+                Cities
+            </a>
+
+            <a href="#reviews" class="nav-link">
+                Reviews
+            </a>
+
+            <a href="#contact" class="nav-link">
+                Contact
+            </a>
+</nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-small">
+                <i class="fas fa-car"></i>
+                EASY & AFFORDABLE CAR RENTAL
+            </span>
+
+            <h1>
+                Find Your Perfect
+                <span>Ride</span>
+            </h1>
+
+            <p>
+                Rent your favorite car easily with
+                Shiv Car Rental.
+            </p>
+
+            <!-- SEARCH BOX -->
+
+            <div class="search-widget">
+
+                <div class="search-field">
+
+                    <i class="fas fa-location-dot"></i>
+
+                    <div>
+                        <label>Location</label>
+                        <input type="text" id="locationInput" placeholder="Enter city">
+                    </div>
+
+                </div>
+
+                <div class="search-field">
+
+                    <i class="fas fa-calendar"></i>
+
+                    <div>
+                        <label>Pickup Date</label>
+                        <input type="date" id="pickupDate">
+                    </div>
+
+                </div>
+
+                <div class="search-field">
+
+                    <i class="fas fa-calendar-check"></i>
+
+                    <div>
+                        <label>Return Date</label>
+                        <input type="date" id="returnDate">
+                    </div>
+
+                </div>
+
+                <button class="search-btn" onclick="searchCars()">
+
+                    <i class="fas fa-search"></i>
+                    Search
+
+                </button>
+
+            </div>
+
+            <div class="hero-trust">
+                <span><i class="fas fa-circle-check"></i> No hidden charges</span>
+                <span><i class="fas fa-shield-halved"></i> Verified cars</span>
+                <span><i class="fas fa-headset"></i> 24/7 support</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features">
+
+        <div class="feature-card">
+
+            <div class="icon-box">
+                <i class="fas fa-car"></i>
+            </div>
+
+            <h3>Wide Range of Cars</h3>
+
+            <p>
+                Choose from economy, SUV,
+                luxury and premium cars.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="icon-box">
+                <i class="fas fa-indian-rupee-sign"></i>
+            </div>
+
+            <h3>Affordable Prices</h3>
+
+            <p>
+                Enjoy competitive prices
+                with no hidden charges.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="icon-box">
+                <i class="fas fa-shield-halved"></i>
+            </div>
+
+            <h3>Safe & Secure</h3>
+
+            <p>
+                Your safety and security
+                are our top priority.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="icon-box">
+                <i class="fas fa-headset"></i>
+            </div>
+
+            <h3>24/7 Support</h3>
+
+            <p>
+                Our support team is available
+                whenever you need help.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section class="how-section" id="how-it-works">
+
+        <div class="section-title">
+            <span>SIMPLE &amp; FAST</span>
+            <h2>How It Works</h2>
+            <p>Book your car in four simple steps.</p>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <div class="step-icon"><i class="fas fa-car"></i></div>
+                <h3>Choose a Car</h3>
+                <p>Select the car that fits your trip and budget.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <div class="step-icon"><i class="fas fa-location-dot"></i></div>
+                <h3>Pick Location</h3>
+                <p>Enter your pickup city and preferred dates.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <div class="step-icon"><i class="fas fa-calendar-check"></i></div>
+                <h3>Confirm Booking</h3>
+                <p>Enter your details and review the estimated total.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">04</div>
+                <div class="step-icon"><i class="fas fa-road"></i></div>
+                <h3>Enjoy Your Ride</h3>
+                <p>Collect your car and enjoy a comfortable journey.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ================= CARS ================= -->
+
+    <section class="cars-section" id="cars">
+
+        <div class="section-title">
+
+            <span>OUR FLEET</span>
+
+            <h2>Popular Cars</h2>
+
+            <p>
+                Choose from our most popular
+                rental cars.
+            </p>
+
+        </div>
+
+
+        <!-- FILTER -->
+
+        <div class="car-filter">
+
+            <div class="category-filter" aria-label="Car categories">
+                <button class="category-btn active" data-category="all" onclick="filterCategory('all', this)">All</button>
+                <button class="category-btn" data-category="hatchback" onclick="filterCategory('hatchback', this)">Hatchback</button>
+                <button class="category-btn" data-category="sedan" onclick="filterCategory('sedan', this)">Sedan</button>
+                <button class="category-btn" data-category="suv" onclick="filterCategory('suv', this)">SUV</button>
+                <button class="category-btn" data-category="luxury" onclick="filterCategory('luxury', this)">Luxury</button>
+            </div>
+
+            <div class="filter-search">
+
+                <i class="fas fa-search"></i>
+
+                <input type="text" id="carSearch" placeholder="Search car..." onkeyup="filterCars()">
+
+            </div>
+
+            <select id="priceSort" onchange="sortCars()">
+
+                <option value="default">
+                    Sort by Price
+                </option>
+
+                <option value="low">
+                    Low to High
+                </option>
+
+                <option value="high">
+                    High to Low
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="fleet-grid" id="fleetGrid">
+
+
+            <!-- CAR 1 -->
+
+            <div class="car-card" data-name="Hyundai i20" data-category="hatchback" data-price="70">
+
+                <div class="car-image">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfdCDqBVRce5kbEFAof-ljnvwDpO0fhE4a8kqBSioPaA&s=10"
+                        alt="Hyundai i20 N-line">
+
+                    <button class="favorite" onclick="toggleFavorite(this)">
+
+                        <i class="far fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Hyundai i20</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>4.6</span>
+                    </div>
+
+                    <div class="car-specs">
+
+                        <span>
+                            <i class="fas fa-cog"></i>
+                            Manual
+                        </span>
+
+                        <span>
+                            <i class="fas fa-gas-pump"></i>
+                            Petrol
+                        </span>
+
+                        <span>
+                            <i class="fas fa-users"></i>
+                            5 Seats
+                        </span>
+
+                        <span>
+                            <i class="fas fa-snowflake"></i>
+                            AC
+                        </span>
+
+                    </div>
+
+                    <div class="car-bottom">
+
+                        <h4>
+                            ₹70
+                            <small>/ hr</small>
+                        </h4>
+
+                        <div class="car-buttons">
+
+                            <button class="btn-details" onclick="showDetails('Hyundai i20',70)">
+                                Details
+                            </button>
+
+                            <button class="btn-book" onclick="openBooking('Hyundai i20',70)">
+                                Book Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAR 2 -->
+
+            <div class="car-card" data-name="Mahindra Thar" data-category="suv" data-price="120">
+
+                <div class="car-image">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaT5S81cac-u6a8NFibFNvW3Pi68DZTQgHaXb2GCAoeQ&s=10"
+                        alt="Mahindra Thar">
+
+                    <button class="favorite" onclick="toggleFavorite(this)">
+
+                        <i class="far fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Mahindra Thar</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>4.8</span>
+                    </div>
+
+                    <div class="car-specs">
+
+                        <span>
+                            <i class="fas fa-cog"></i>
+                            Manual
+                        </span>
+
+                        <span>
+                            <i class="fas fa-gas-pump"></i>
+                            Diesel
+                        </span>
+
+                        <span>
+                            <i class="fas fa-users"></i>
+                            4 Seats
+                        </span>
+
+                        <span>
+                            <i class="fas fa-snowflake"></i>
+                            AC
+                        </span>
+
+                    </div>
+
+                    <div class="car-bottom">
+
+                        <h4>
+                            ₹120
+                            <small>/ hr</small>
+                        </h4>
+
+                        <div class="car-buttons">
+
+                            <button class="btn-details" onclick="showDetails('Mahindra Thar',120)">
+                                Details
+                            </button>
+
+                            <button class="btn-book" onclick="openBooking('Mahindra Thar',120)">
+                                Book Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAR 3 -->
+
+            <div class="car-card" data-name="Honda City" data-category="sedan" data-price="95">
+
+                <div class="car-image">
+
+                    <img src="https://www.team-bhp.com/sites/default/files/styles/amp_high_res/public/2023-honda-city-facelift-01_2.jpg"
+                        alt="Honda City">
+                    <button class="favorite" onclick="toggleFavorite(this)">
+
+                        <i class="far fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Honda City</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>4.7</span>
+                    </div>
+
+                    <div class="car-specs">
+
+                        <span>
+                            <i class="fas fa-cog"></i>
+                            Automatic
+                        </span>
+
+                        <span>
+                            <i class="fas fa-gas-pump"></i>
+                            Petrol
+                        </span>
+
+                        <span>
+                            <i class="fas fa-users"></i>
+                            5 Seats
+                        </span>
+
+                        <span>
+                            <i class="fas fa-snowflake"></i>
+                            AC
+                        </span>
+
+                    </div>
+
+                    <div class="car-bottom">
+
+                        <h4>
+                            ₹95
+                            <small>/ hr</small>
+                        </h4>
+
+                        <div class="car-buttons">
+
+                            <button class="btn-details" onclick="showDetails('Honda City',95)">
+                                Details
+                            </button>
+
+                            <button class="btn-book" onclick="openBooking('Honda City',95)">
+                                Book Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAR 4 -->
+
+            <div class="car-card" data-name="Tata Nexon" data-category="suv" data-price="85">
+
+                <div class="car-image">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcMssC-wKEMngyZm7Vi5P73TkXiPdwRFNR7gabYQtCRg&s=10"
+                        alt="Tata Nexon">
+                    <button class="favorite" onclick="toggleFavorite(this)">
+
+                        <i class="far fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Tata Nexon</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>4.6</span>
+                    </div>
+
+                    <div class="car-specs">
+
+                        <span>
+                            <i class="fas fa-cog"></i>
+                            Automatic
+                        </span>
+
+                        <span>
+                            <i class="fas fa-gas-pump"></i>
+                            Petrol
+                        </span>
+
+                        <span>
+                            <i class="fas fa-users"></i>
+                            5 Seats
+                        </span>
+
+                        <span>
+                            <i class="fas fa-snowflake"></i>
+                            AC
+                        </span>
+
+                    </div>
+
+                    <div class="car-bottom">
+
+                        <h4>
+                            ₹85
+                            <small>/ hr</small>
+                        </h4>
+
+                        <div class="car-buttons">
+
+                            <button class="btn-details" onclick="showDetails('Tata Nexon',85)">
+                                Details
+                            </button>
+
+                            <button class="btn-book" onclick="openBooking('Tata Nexon',85)">
+                                Book Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAR 5 -->
+
+            <div class="car-card" data-name="Kia Seltos" data-category="suv" data-price="110">
+
+                <div class="car-image">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkGOwVYo6jhkRYCEW4_nyWHeAgQR6F4KlbfnjCD7gfyg&s=10"
+                        alt="Kia Seltos">
+
+                    <button class="favorite" onclick="toggleFavorite(this)">
+
+                        <i class="far fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Kia Seltos</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>4.8</span>
+                    </div>
+
+                    <div class="car-specs">
+
+                        <span>
+                            <i class="fas fa-cog"></i>
+                            Automatic
+                        </span>
+
+                        <span>
+                            <i class="fas fa-gas-pump"></i>
+                            Petrol
+                        </span>
+
+                        <span>
+                            <i class="fas fa-users"></i>
+                            5 Seats
+                        </span>
+
+                        <span>
+                            <i class="fas fa-snowflake"></i>
+                            AC
+                        </span>
+
+                    </div>
+
+                    <div class="car-bottom">
+
+                        <h4>
+                            ₹110
+                            <small>/ hr</small>
+                        </h4>
+
+                        <div class="car-buttons">
+
+                            <button class="btn-details" onclick="showDetails('Kia Seltos',110)">
+                                Details
+                            </button>
+
+                            <button class="btn-book" onclick="openBooking('Kia Seltos',110)">
+                                Book Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAR 6 -->
+
+            <div class="car-card" data-name="Toyota Fortuner" data-category="luxury" data-price="180">
+
+                <div class="car-image">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHgg01LURP1Lzf-2YziT9CcQkK2vxD7gK6BGnUyQizPQ&s=10"
+                        alt="Toyota Fortuner">
+
+                    <button class="favorite" onclick="toggleFavorite(this)">
+
+                        <i class="far fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Toyota Fortuner</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>4.9</span>
+                    </div>
+
+                    <div class="car-specs">
+
+                        <span>
+                            <i class="fas fa-cog"></i>
+                            Automatic
+                        </span>
+
+                        <span>
+                            <i class="fas fa-gas-pump"></i>
+                            Diesel
+                        </span>
+
+                        <span>
+                            <i class="fas fa-users"></i>
+                            7 Seats
+                        </span>
+
+                        <span>
+                            <i class="fas fa-snowflake"></i>
+                            AC
+                        </span>
+
+                    </div>
+
+                    <div class="car-bottom">
+
+                        <h4>
+                            ₹180
+                            <small>/ hr</small>
+                        </h4>
+
+                        <div class="car-buttons">
+
+                            <button class="btn-details" onclick="showDetails('Toyota Fortuner',180)">
+                                Details
+                            </button>
+
+                            <button class="btn-book" onclick="openBooking('Toyota Fortuner',180)">
+                                Book Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAR 7 -->
+
+            <div class="car-card" data-name="Maruti Swift" data-category="hatchback" data-price="65">
+
+                <div class="car-image">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZsfp8T5KpurXeB-zm_Luz5Q91vVgyPIQPMC3CzWe8SA&s=10"
+                        alt="Maruti Swift">
+                    <button class="favorite" onclick="toggleFavorite(this)">
+
+                        <i class="far fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Maruti Swift</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>4.5</span>
+                    </div>
+
+                    <div class="car-specs">
+
+                        <span>
+                            <i class="fas fa-cog"></i>
+                            Manual
+                        </span>
+
+                        <span>
+                            <i class="fas fa-gas-pump"></i>
+                            Petrol
+                        </span>
+
+                        <span>
+                            <i class="fas fa-users"></i>
+                            5 Seats
+                        </span>
+
+                        <span>
+                            <i class="fas fa-snowflake"></i>
+                            AC
+                        </span>
+
+                    </div>
+
+                    <div class="car-bottom">
+
+                        <h4>
+                            ₹65
+                            <small>/ hr</small>
+                        </h4>
+
+                        <div class="car-buttons">
+
+                            <button class="btn-details" onclick="showDetails('Maruti Swift',65)">
+                                Details
+                            </button>
+
+                            <button class="btn-book" onclick="openBooking('Maruti Swift',65)">
+                                Book Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAR 8 -->
+
+            <div class="car-card" data-name="Hyundai Creta" data-category="suv" data-price="105">
+
+                <div class="car-image">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDTEFy3yGwb9qpJjiHlJ6MnJ3Xfup_jehmQuPstMNFnQ&s=10"
+                        alt="Hyundai Creta">
+
+
+                    <button class="favorite" onclick="toggleFavorite(this)">
+
+                        <i class="far fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Hyundai Creta</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>4.7</span>
+                    </div>
+
+                    <div class="car-specs">
+
+                        <span>
+                            <i class="fas fa-cog"></i>
+                            Automatic
+                        </span>
+
+                        <span>
+                            <i class="fas fa-gas-pump"></i>
+                            Diesel
+                        </span>
+
+                        <span>
+                            <i class="fas fa-users"></i>
+                            5 Seats
+                        </span>
+
+                        <span>
+                            <i class="fas fa-snowflake"></i>
+                            AC
+                        </span>
+
+                    </div>
+
+                    <div class="car-bottom">
+
+                        <h4>
+                            ₹105
+                            <small>/ hr</small>
+                        </h4>
+
+                        <div class="car-buttons">
+
+                            <button class="btn-details" onclick="showDetails('Hyundai Creta',105)">
+                                Details
+                            </button>
+
+                            <button class="btn-book" onclick="openBooking('Hyundai Creta',105)">
+                                Book Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAR 9 -->
+
+            <div class="car-card" data-name="MG Hector" data-category="luxury" data-price="125">
+
+                <div class="car-image">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd3lJL76ZvBElZeSd1Er_XPK2-aCq09LMFzPR3pszqNQ&s=10"
+                        alt="MG Hector">
+                    <button class="favorite" onclick="toggleFavorite(this)">
+
+                        <i class="far fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="car-details">
+
+                    <h3>MG Hector</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>4.7</span>
+                    </div>
+
+                    <div class="car-specs">
+
+                        <span>
+                            <i class="fas fa-cog"></i>
+                            Automatic
+                        </span>
+
+                        <span>
+                            <i class="fas fa-gas-pump"></i>
+                            Petrol
+                        </span>
+
+                        <span>
+                            <i class="fas fa-users"></i>
+                            5 Seats
+                        </span>
+
+                        <span>
+                            <i class="fas fa-snowflake"></i>
+                            AC
+                        </span>
+
+                    </div>
+
+                    <div class="car-bottom">
+
+                        <h4>
+                            ₹125
+                            <small>/ hr</small>
+                        </h4>
+
+                        <div class="car-buttons">
+
+                            <button class="btn-details" onclick="showDetails('MG Hector',125)">
+                                Details
+                            </button>
+
+                            <button class="btn-book" onclick="openBooking('MG Hector',125)">
+                                Book Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CITIES ================= -->
+
+    <section class="cities-section" id="cities">
+
+        <div class="section-title">
+
+            <span>AVAILABLE LOCATIONS</span>
+
+            <h2>Rent a Car in Your City</h2>
+
+            <p>
+                Available in popular cities across India.
+            </p>
+
+        </div>
+
+        <div class="cities">
+
+            <button class="city" onclick="selectCity('Ahmedabad')">
+                Ahmedabad
+            </button>
+
+            <button class="city" onclick="selectCity('Surat')">
+                Surat
+            </button>
+
+            <button class="city" onclick="selectCity('Vadodara')">
+                Vadodara
+            </button>
+
+            <button class="city" onclick="selectCity('Mumbai')">
+                Mumbai
+            </button>
+
+            <button class="city" onclick="selectCity('Delhi')">
+                Delhi
+            </button>
+
+            <button class="city" onclick="selectCity('Pune')">
+                Pune
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= REVIEWS ================= -->
+
+    <section class="reviews-section" id="reviews">
+
+        <div class="section-title">
+
+            <span>CUSTOMER REVIEWS</span>
+
+            <h2>What Our Customers Say</h2>
+
+        </div>
+
+        <div class="reviews-grid">
+
+
+            <div class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Excellent service and very clean cars.
+                    Booking was quick and easy."
+                </p>
+
+                <h4>
+                    Rahul Patel
+                </h4>
+
+                <span>
+                    Ahmedabad
+                </span>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "The rental service is really
+                    useful for regular travel."
+                </p>
+
+                <h4>
+                    Priya Shah
+                </h4>
+
+                <span>
+                    Surat
+                </span>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Great selection of cars and
+                    affordable rental prices."
+                </p>
+
+                <h4>
+                    Amit Mehta
+                </h4>
+
+                <span>
+                    Vadodara
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact-section" id="contact">
+
+        <div class="contact-content">
+
+            <span>
+                NEED HELP?
+            </span>
+
+            <h2>
+                Contact Shiv Car Rental
+            </h2>
+
+            <p>
+                Our team is available to help you
+                with bookings and questions.
+            </p>
+
+            <button class="contact-btn" onclick="contactUs()">
+
+                <i class="fas fa-phone"></i>
+                Contact Us
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo"><i class="fas fa-car"></i><span>Shiv Car Rental</span></div>
+                <p>Your trusted partner for comfortable, affordable and convenient car rentals.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/919876543210" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <a href="#home">Home</a>
+                <a href="#cars">Our Cars</a>
+                <a href="#reviews">Reviews</a>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <a href="#cars">Hourly Rental</a>
+                <a href="#cars">Daily Rental</a>
+                <a href="#contact">Customer Support</a>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <a href="tel:+919876543210"><i class="fas fa-phone"></i> +91 98765 43210</a>
+                <a href="mailto:support@shivcarrental.com"><i class="fas fa-envelope"></i> support@shivcarrental.com</a>
+                <span><i class="fas fa-clock"></i> Open 24/7</span>
+            </div>
+        </div>
+        <div class="copyright">© 2026 Shiv Car Rental. All Rights Reserved.</div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/919876543210?text=Hello%20Shiv%20Car%20Rental%2C%20I%20want%20to%20rent%20a%20car." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+    <!-- ================= MODAL ================= -->
+
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <button class="modal-close" onclick="closeModal()">
+
+                <i class="fas fa-xmark"></i>
+
+            </button>
+
+            <div id="modalBody"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div class="toast" id="toast">
+
+        <i class="fas fa-check-circle"></i>
+
+        <span id="toastMessage">
+            Success
+        </span>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
